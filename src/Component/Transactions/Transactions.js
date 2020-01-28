@@ -17,7 +17,7 @@ class Transactions extends Component {
     }
 
     render() {
-        // console.log(this.props.dataProvider.data.getBankTransactionsByState)
+        console.log(this.props.dataProvider.data.getBankTransactionsByState)
         const list = this.props.dataProvider && this.props.dataProvider.data.getBankTransactionsByState || []
         return (
             <div className="table-responsive22">
@@ -55,13 +55,6 @@ class Transactions extends Component {
                                     </a>
                                 )
                             })}
-
-                            {/*<a className="list-group-item list-group-item-action" id="list-profile-list"*/}
-                               {/*data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>*/}
-                            {/*<a className="list-group-item list-group-item-action" id="list-messages-list"*/}
-                               {/*data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>*/}
-                            {/*<a className="list-group-item list-group-item-action" id="list-settings-list"*/}
-                               {/*data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>*/}
                         </div>
                     </div>
                     <div className="col-8">
@@ -97,47 +90,9 @@ class Transactions extends Component {
                                     </div>
                                 )
                             })}
-
-
-                            {/*<div className="tab-pane fade show active" id="list-home" role="tabpanel"*/}
-                                 {/*aria-labelledby="list-home-list">323*/}
-                            {/*</div>*/}
-                            {/*<div className="tab-pane fade" id="list-profile" role="tabpanel"*/}
-                                 {/*aria-labelledby="list-profile-list">121212*/}
-                            {/*</div>*/}
-                            {/*<div className="tab-pane fade" id="list-messages" role="tabpanel"*/}
-                                 {/*aria-labelledby="list-messages-list">.5454*/}
-                            {/*</div>*/}
-                            {/*<div className="tab-pane fade" id="list-settings" role="tabpanel"*/}
-                                 {/*aria-labelledby="list-settings-list">...5454556787*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                 </div>
-
-
-                {/*<table className="table table-striped table-sm">*/}
-                    {/*<thead>*/}
-                        {/*<tr>*/}
-                            {/*<th>#</th>*/}
-                            {/*<th>Header</th>*/}
-                            {/*<th>Header</th>*/}
-                            {/*<th>Header</th>*/}
-                            {/*<th>Header</th>*/}
-                        {/*</tr>*/}
-                    {/*</thead>*/}
-                    {/*<tbody>*/}
-                    {/*<tr>*/}
-                        {/*<td>1,001</td>*/}
-                        {/*<td>Lorem</td>*/}
-                        {/*<td>ipsum</td>*/}
-                        {/*<td>dolor</td>*/}
-                        {/*<td>sit</td>*/}
-                    {/*</tr>*/}
-
-
-                    {/*</tbody>*/}
-                {/*</table>*/}
             </div>
         );
     }

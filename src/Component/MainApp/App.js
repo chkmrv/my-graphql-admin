@@ -8,35 +8,12 @@ import Header from "../Header"
 import Transactions from "../Transactions/Transactions"
 
 const MY_QUERY2 = gql`query {
-    getTransactionIdentificationCheckFromTransaction(bank_transaction_id: "251128") {
-        id,
-        uuid,
-        score,
-        debtor_name,
-        invoice_number,
-        invoice_numbers,
-        merchant_name,
-        ticket_uuid,
-        ticket_amount,
-        ticket_state,
-        ticket_due_date,
-        ticket_outstanding_amount,
-        invoice_date
+
     }
 }`;
 
 const MY_QUERY = gql`query {
-    getBankTransactionsByState(state: "pending_identification") {
-        id
-        uuid
-        amount
-        booking_date
-        debtor_name
-        remittance_information
-        merchant_type,
-            state,
-            is_merchant_greylisted
-    }
+    
 }`;
 
 class App extends Component {
@@ -45,7 +22,7 @@ class App extends Component {
         this.state = { dataProvider: null };
     }
 
-    componentDidMount() {
+    apolloClient() {
         const cache = new InMemoryCache();
         const apolloClient = new ApolloClient({
             link,
@@ -56,17 +33,21 @@ class App extends Component {
 
     }
 
+    componentDidMount() {
+       this.apolloClient()
+    }
+
     render() {
         const { dataProvider } = this.state;
         console.log('dataProvider', dataProvider)
 
-        // if (!dataProvider) {
-        //     return  <div className="App">
-        //         <header className="App-header">
-        //             <div>Loading</div>
-        //         </header>
-        //     </div>;
-        // }
+        if (!dataProvider) {
+            return  <div className="App">
+                <header className="App-header">
+                    <div>Loading</div>
+                </header>
+            </div>;
+        }
 
         return (
             <div className="App">
