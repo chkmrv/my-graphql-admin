@@ -1,0 +1,37 @@
+{
+  "extends": "stylelint-config-recommended",
+  "rules": {
+    "max-empty-lines": 1,
+    "string-quotes": "single",
+    "color-hex-length": "long",
+    "number-leading-zero": "never",
+    "font-weight-notation": "numeric",
+    "block-opening-brace-space-before": "always",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "block-closing-brace-empty-line-before": "never",
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ],
+    "comment-empty-line-before": [ "always", {
+      "ignore": ["stylelint-commands", "after-comment"]
+    } ],
+    "at-rule-empty-line-before": [ "always", {
+      "except": [ "blockless-after-same-name-blockless", "first-nested" ],
+      "ignore": [ "after-comment" ]
+    } ],
+    "declaration-empty-line-before": [ "always", {
+      "except": [ "after-declaration", "first-nested" ],
+      "ignore": [ "after-comment", "inside-single-line-block" ]
+    } ],
+    "function-url-quotes": ["always", {
+      "except": ["empty"]
+    }],
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "no-empty-source": true,
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true
+  }
+}

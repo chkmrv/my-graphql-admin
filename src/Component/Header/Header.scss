@@ -1,0 +1,67 @@
+.header {
+  //background: linear-gradient(to #0e1e24, #ff4338);
+  //background-image: linear-gradient(to right, #ff4338,  #282c34, #282c34 );
+  background-size: cover;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+
+  .navbar-brand {
+    text-align: left;
+
+    img {
+      height: 34px;
+    }
+  }
+
+  &-head-block {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsla(0,0%,100%,.15);
+    cursor: pointer;
+
+    h4,
+    i {
+      align-self: center;
+    }
+
+    h4 {
+      max-width: calc(100% - 25px);
+      margin: 16px 0;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-left: auto;
+
+    .topbar-divider {
+      width: 0;
+      border-right: 1px solid #e3e6f0;
+      height: 2.375rem;
+      margin: auto 1rem;
+      display: block
+    }
+
+    span {
+      color: #d1d3e2;
+    }
+
+    .img-profile {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    .rounded-circle {
+      border-radius: 50%!important;
+    }
+
+  }
+
+
+}
