@@ -47,12 +47,6 @@ class App extends Component {
 
     componentDidMount() {
         const cache = new InMemoryCache();
-        const link = new HttpLink({
-            uri: 'https://efmk7otd2zbobpifz36ppguffe.appsync-api.eu-central-1.amazonaws.com/graphql',
-            headers: {
-                'x-api-key': 'da2-do5eyrz7ubez5pcxatveizqf6i'
-            }
-        });
         const apolloClient = new ApolloClient({
             link,
             cache
